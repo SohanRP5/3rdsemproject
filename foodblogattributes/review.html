@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Review</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            transition: background-color 0.5s ease-in-out;
+            background-image: url('image6.jpg');
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-size: cover;
+        }
+           
+
+        #recipeContainer {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        #recipeHeader {
+            background-color:blueviolet;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #recipePhoto {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #recipeDetails {
+            padding: 20px;
+            transition: padding 0.5s ease-in-out;
+        }
+
+        #recipeForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color:burlywood;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hover effects */
+        #recipeContainer:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #recipeHeader:hover {
+            background-color: #45a049;
+        }
+
+        #recipePhoto:hover {
+            transform: scale(1.1);
+        }
+
+        #recipeDetails:hover {
+            padding: 30px;
+        }
+
+        #recipeForm:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div id="recipeContainer">
+    <div id="recipeHeader">
+        <h1>YOURS RECIPE IDEAS</h1>
+    </div>
+
+
+    <div id="recipeDetails">
+        <h2>Recipe Details</h2>
+        <form id="recipeForm">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <label for="recipePhotoInput">Recipe Photo:</label>
+            <input type="file" id="recipePhotoInput" name="recipePhoto" accept="image/*">
+
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
