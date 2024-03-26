@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           
+            background-image: url('image9.jpg');
+            background-size: cover;
+            color:aliceblue;
+           position:fixed;
+        
+            
+        }
+        h1{
+            color:aquamarine;
+            
+        }
+        
+        #navbar {
+            background-color:antiquewhite;
+            overflow: hidden;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+          
+            background-size: cover;
+           
+            
+
+            
+        }
+
+        #navbar a {
+            float:right;
+            display: block;
+            color:black;
+            text-align: center;
+            padding: 30px 16px;
+            text-decoration: none;
+            font-size: 18px;
+           
+           
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            
+        }
+
+        #menuBtn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            color:black;
+        }
+        
+
+        #sideMenu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color:blur;
+            overflow-x: hidden;
+            transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            padding-top: 60px;
+            text-align:right;
+        }
+
+        #sideMenu a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color:aqua;
+            display: block;
+            transition: color 0.1s ease-in-out;
+            border-bottom: 1px solid #555;
+            background-color:darkslateblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #sideMenu a:hover {
+            color: #f1f1f1;
+        }
+
+        #content {
+            transition: margin-left 0.5s ease-in-out;
+            padding: 16px;
+            margin-left: 0;
+        }
+
+        #content h2 {
+            color: #333;
+        }
+
+        #content p {
+            color: #555;
+        }
+
+      
+        #content::after {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+       
+        #sideMenu.active ~ #content::after {
+            display: block;
+            opacity: 1;
+        }
+        center{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:aliceblue;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px) saturate(70%);
+ 
+}
+footer{
+    background-color:bisque;
+    color:cadetblue;
+    height: 20px;
+}
+  
+</style>
+</head>
+
+<body>  
+<div id="navbar">
+    <a href="profilepage.html">PROFILE
+    </a>
+</div>
+<br><br>
+<div id="sideMenu">
+    <br><br>
+      <a href="menu.html">Menu Item </a>
+  <a href="orderwebsite.html">Order your food</a>
+    <a href="review.html">SEND YOUR DELECIOUS FOOD</a>
+    <a href="#" onclick="closeMenu()">Close</a>
+    <a href="login page.html">Logout-></a>    
+</div>
+<marquee><h1>WELCOME TO OUR WEBSITE</h1></marquee>
+
+<div id="content">
+    <div id="menuBtn" onclick="openMenu()">&#9776; SAVITAS'S KITCHEN</div>
+</div>
+
+<p><center>Welcome to Savita's Kitchen – a culinary haven where passion for food meets <br>the art of cooking! Our journey began with a simple yet profound love for creating delicious, <br>wholesome meals that bring joy to every table. At Savita's Kitchen, we believe that food is not just a necessity; <br>it's an experience, a celebration of flavors, and a connection to our cultural roots.
+
+    Savita's Kitchen is more than just a food website; it's a reflection of our founder's culinary expertise<br> and dedication to sharing the joy of cooking with the world. Savita, our passionate chef and the heart behind the kitchen, <br>has spent years perfecting her craft and creating delightful recipes that cater to diverse tastes and preferences.
+    
+    Our Mission:
+    At Savita's Kitchen, our mission is to inspire and empower individuals <br>to embark on a flavorful journey through the world of cooking. We strive to make the kitchen a place of creativity and exploration,<br> where everyone can feel confident and excited about preparing delicious meals for themselves and their loved ones.</center></p>
+    <br><br><br>
+    <marquee ><h1><b>OUR ACHIEVEMENTS</b></h1></marquee>
+    <br><br><br>
+<marquee>
+<img src="image16.jpg">
+<img src="image18.jpg">
+<img src="image17.jpg">
+<img src="image19.jpg">
+<img src="image20.jpg">
+
+</marquee>
+ 
+
+<script>
+    function openMenu() {
+        document.getElementById("sideMenu").style.width = "250px";
+        document.getElementById("content").style.marginLeft = "250px";
+        document.getElementById("content").style.overflow = "hidden";
+    }
+
+    function closeMenu() {
+        document.getElementById("sideMenu").style.width = "0";
+        document.getElementById("content").style.marginLeft= "0";
+        document.getElementById("content").style.overflow = "visible";
+    }
+</script>
+<footer>
+    <div>
+        <center>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </center>
+    </div>
+</footer>
+
+</body>
+</html>
